@@ -15,7 +15,9 @@ public class TestDataInit {
 
     /**
      * 확인용 초기 데이터 추가
+     * 스프링 뜰 때 자동으로 호출된다.
      */
+    // 스프링 컨테이너가 완전히 초기화를 다 끝내고, 실행 준비가 되었을 때 발생하는 이벤트
     @EventListener(ApplicationReadyEvent.class)
     public void initData() {
         log.info("test data init");
